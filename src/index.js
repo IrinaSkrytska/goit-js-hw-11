@@ -1,29 +1,32 @@
 import Notiflix, { Notify } from 'notiflix';
 import './sass/main.scss';
 import fetchPictures from './js/fetchPictures';
+import SimpleLightbox from 'simplelightbox';
+import 'simplelightbox/dist/simple-lightbox.min.css';
 import LoadMoreBtn from './js/loadMoreBtn';
 
 
 const refs = {
     inputData: document.querySelector('#search-form input'),
-    gallery: document.querySelector('.gallery-thumb'),
+    gallery: document.querySelector('.gallery'),
     submitBtn: document.querySelector('#search-form button'),
-    loadMoreButton: document.querySelector('.load-more-btn'),
+    loadMoreButton: document.querySelector('.load-more'),
 
 };
 
 const { searchForm, inputData, gallery, submitBtn,loadMoreButton } = refs;
-
-submitBtn.addEventListener('click', onSearch);
 
 let nextPageFormInput = '';
 let nextPageNumber = 1;
 let ifTextEntered = true;
 
 const loadMoreBtn = new LoadMoreBtn({
-    selector: ".load-more-btn",
+    selector: ".load-more",
     hidden: true,
 });
+
+
+submitBtn.addEventListener('click', onSearch);
 
 function onSearch(evt) {
     evt.preventDefault();
@@ -44,8 +47,11 @@ function onSearch(evt) {
 
     return fetchPictures(inputForSearch, nextPageNumber)
         .then(pictures => renderPictures(pictures))
-        .catch(error => console.log(error));
+        .catch(error => {
+            console.log(error)
+        });
 }
+
 
 function renderPictures(pictures) {
     let picturesCounter = pictures.data.hits.length;
@@ -108,21 +114,21 @@ function renderPictures(pictures) {
         }
     }
  
-}
-        //add load
 
-        loadMoreButton.addEventListener('click', onloadMore);
+    //add load
 
-        function onloadMore(evt) {
-            evt.preventDefault();
-            loadMoreBtn.disable();
+    loadMoreButton.addEventListener('click', onloadMore);
+
+    function onloadMore(evt) {
+        evt.preventDefault();
+        loadMoreBtn.disable();
            
-            nextPageNumber += 1;
+        nextPageNumber += 1;
  
-            return fetchPictures(nextPageFormInput, nextPageNumber)
-                .then(pictures => renderPictures(pictures))
-                .catch(error => {
-                    console.log(error)
-                });
-        } 
-    
+        return fetchPictures(nextPageFormInput, nextPageNumber)
+            .then(pictures => renderPictures(pictures))
+            .catch(error => {
+                console.log(error)
+            });
+    }
+}
