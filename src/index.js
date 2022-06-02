@@ -76,8 +76,7 @@ function renderPictures(pictures) {
         loadMoreBtn.show();
         
         //add html structure
-        const galleryMarkup = pictures.data.hits.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) => {
-            return
+        const galleryMarkup = pictures.data.hits.map(({ webformatURL, largeImageURL, tags, likes, views, comments, downloads }) =>
             ` <div class="gallery__card">
             <a class="gallery__card__item href="${largeImageURL}">
             <img src="${webformatURL}" alt="${tags}" width="300" height="200" loading="lazy"/> </a>
@@ -102,8 +101,8 @@ function renderPictures(pictures) {
             ${downloads}
             </p>
             </div>
-        </div>`;
-        }).join('');
+        </div>`
+      ).join('');
 
         gallery.insertAdjacentHTML('beforeend', galleryMarkup);
         inputData.value = '';
