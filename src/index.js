@@ -85,17 +85,14 @@ function renderPictures(pictures) {
             <b>Likes</b>
             ${likes}
             </p>
-
             <p class="gallery_info_item>
             <b>Views</b>
             ${views}
             </p>
- 
             <p class="gallery_info_item>
             <b>Comments</b>
             ${comments}
             </p>
-
             <p class="gallery_info_item>
             <b>Downloads</b>
             ${downloads}

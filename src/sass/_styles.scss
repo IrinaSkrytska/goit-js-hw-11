@@ -1,0 +1,55 @@
+
+h1 {
+  visibility: hidden;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.gallery{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content:center;
+  
+}
+.gallery__card{
+margin: 10px;
+}
+body{
+background-image: linear-gradient(90deg, #a2a49f, #e0d0c4, #f1dac4);
+}
+header{
+  background-color: #e0d0c4;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12),
+    0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+    padding: 20px 0 20px 0;
+}
+.search-form{
+  display: flex;
+  justify-content: center;
+
+}
+.search-form__input{
+  background-color: #e6e6e6;
+  width: 300px;
+  height: 30px;
+  border-radius: 3px 3px 3px 3px;
+  border: 1px;
+}
+
+.search-form__button{
+  background-color: #cccffc;
+  margin-left: 10px;
+  border-radius: 5px 5px 5px 5px;
+}
+
+.load{
+   display: flex;
+   justify-content: center;padding: 10px 0 20px 0;
+}
+.load-more{
+  background-color: #cccffc;
+  border-radius: 5px 5px 5px 5px;
+}
