@@ -81,21 +81,21 @@ function renderPictures(pictures) {
             <a class="gallery__card__item href="${largeImageURL}">
             <img src="${webformatURL}" alt="${tags}" width="300" height="200" loading="lazy"/> </a>
             <div class="gallery_info">
-            <p class="gallery_info_item>
+            <p class="gallery_info_item">
             <b>Likes</b>
-            ${likes}
+            <br> ${likes}
             </p>
-            <p class="gallery_info_item>
+            <p class="gallery_info_item">
             <b>Views</b>
-            ${views}
+            <br>${views}
             </p>
-            <p class="gallery_info_item>
+            <p class="gallery_info_item">
             <b>Comments</b>
-            ${comments}
+            <br>${comments}
             </p>
-            <p class="gallery_info_item>
+            <p class="gallery_info_item">
             <b>Downloads</b>
-            ${downloads}
+            <br>${downloads}
             </p>
             </div>
         </div>`
