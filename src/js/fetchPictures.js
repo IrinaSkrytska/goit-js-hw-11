@@ -1,3 +1,5 @@
+import axios from 'axios';
+
 export default async function fetchPictures(name, pageNumber) {
     const axios = require('axios');
 
