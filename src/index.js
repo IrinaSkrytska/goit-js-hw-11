@@ -111,7 +111,7 @@ function renderPictures(pictures) {
     }
  
 
-    //add load
+    //add loadMoreBtn
 
     loadMoreButton.addEventListener('click', onloadMore);
 

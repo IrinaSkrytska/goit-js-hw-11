@@ -31,4 +31,3 @@ export default class LoadMoreBtn {
         this.refs.button.classList.add('is-hidden');
     }
 }
-
