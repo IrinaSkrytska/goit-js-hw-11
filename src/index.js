@@ -111,8 +111,11 @@ function renderPictures(pictures) {
     }
  
 
-    //add loadMoreBtn
 
+
+}
+    //add loadMoreBtn
+    
     loadMoreButton.addEventListener('click', onloadMore);
 
     function onloadMore(evt) {
@@ -127,4 +130,3 @@ function renderPictures(pictures) {
                 console.log(error)
             });
     }
-}
